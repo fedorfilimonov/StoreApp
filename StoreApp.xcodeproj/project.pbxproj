@@ -79,7 +79,10 @@
 		322D6D3625D44109008525B9 = {
 			isa = PBXGroup;
 			children = (
-				322D6D4125D4410A008525B9 /* StoreApp */,
+				322D6D7A25D44224008525B9 /* Application */,
+				322D6D7925D44215008525B9 /* Resources */,
+				322D6D7825D44207008525B9 /* Utils */,
+				322D6D4125D4410A008525B9 /* App */,
 				322D6D5825D4410B008525B9 /* StoreAppTests */,
 				322D6D6325D4410B008525B9 /* StoreAppUITests */,
 				322D6D4025D4410A008525B9 /* Products */,
@@ -96,9 +99,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		322D6D4125D4410A008525B9 /* StoreApp */ = {
+		322D6D4125D4410A008525B9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				322D6D7D25D44242008525B9 /* Flows */,
+				322D6D7C25D4423B008525B9 /* Entity */,
+				322D6D7B25D44234008525B9 /* BusinessLogic */,
 				322D6D4225D4410A008525B9 /* AppDelegate.swift */,
 				322D6D4425D4410A008525B9 /* SceneDelegate.swift */,
 				322D6D4625D4410A008525B9 /* ViewController.swift */,
@@ -107,7 +113,7 @@
 				322D6D4D25D4410B008525B9 /* LaunchScreen.storyboard */,
 				322D6D5025D4410B008525B9 /* Info.plist */,
 			);
-			path = StoreApp;
+			path = App;
 			sourceTree = "<group>";
 		};
 		322D6D5825D4410B008525B9 /* StoreAppTests */ = {
@@ -126,6 +132,48 @@
 				322D6D6625D4410B008525B9 /* Info.plist */,
 			);
 			path = StoreAppUITests;
+			sourceTree = "<group>";
+		};
+		322D6D7825D44207008525B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		322D6D7925D44215008525B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		322D6D7A25D44224008525B9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		322D6D7B25D44234008525B9 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		322D6D7C25D4423B008525B9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		322D6D7D25D44242008525B9 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
