@@ -12,6 +12,15 @@
 		322D6D4F25D4410B008525B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322D6D4D25D4410B008525B9 /* LaunchScreen.storyboard */; };
 		322D6D5A25D4410B008525B9 /* StoreAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D6D5925D4410B008525B9 /* StoreAppTests.swift */; };
 		322D6D6525D4410B008525B9 /* StoreAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D6D6425D4410B008525B9 /* StoreAppUITests.swift */; };
+		32CB356D25DEC0D900960A70 /* SignUpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB356C25DEC0D900960A70 /* SignUpResult.swift */; };
+		32CB357725DEC19900960A70 /* SignUpRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB357625DEC19900960A70 /* SignUpRequestFactory.swift */; };
+		32CB357C25DEC1A600960A70 /* SignOutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB357B25DEC1A600960A70 /* SignOutRequestFactory.swift */; };
+		32CB358125DEC1B300960A70 /* UpdateProfileRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB358025DEC1B300960A70 /* UpdateProfileRequestFactory.swift */; };
+		32CB358625DEC1BD00960A70 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB358525DEC1BD00960A70 /* SignUp.swift */; };
+		32CB358B25DEC1C600960A70 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB358A25DEC1C600960A70 /* SignOut.swift */; };
+		32CB359025DEC1D100960A70 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB358F25DEC1D100960A70 /* UpdateProfile.swift */; };
+		32CB359525DEC1FA00960A70 /* SignOutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB359425DEC1FA00960A70 /* SignOutResult.swift */; };
+		32CB359A25DEC20700960A70 /* UpdateProfileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB359925DEC20700960A70 /* UpdateProfileResult.swift */; };
 		32D234D425D813BD000BC9C6 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D234D325D813BD000BC9C6 /* AbstractErrorParser.swift */; };
 		32D234DD25D81446000BC9C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32D234DC25D81446000BC9C6 /* Alamofire */; };
 		32D234E225D81459000BC9C6 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D234E125D81459000BC9C6 /* ErrorParser.swift */; };
@@ -54,6 +63,15 @@
 		322D6D6025D4410B008525B9 /* StoreAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D6D6425D4410B008525B9 /* StoreAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppUITests.swift; sourceTree = "<group>"; };
 		322D6D6625D4410B008525B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32CB356C25DEC0D900960A70 /* SignUpResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResult.swift; sourceTree = "<group>"; };
+		32CB357625DEC19900960A70 /* SignUpRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestFactory.swift; sourceTree = "<group>"; };
+		32CB357B25DEC1A600960A70 /* SignOutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutRequestFactory.swift; sourceTree = "<group>"; };
+		32CB358025DEC1B300960A70 /* UpdateProfileRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileRequestFactory.swift; sourceTree = "<group>"; };
+		32CB358525DEC1BD00960A70 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		32CB358A25DEC1C600960A70 /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignOut.swift; path = GBShop/BusinessLogic/Network/SignUp/SignOut.swift; sourceTree = SOURCE_ROOT; };
+		32CB358F25DEC1D100960A70 /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpdateProfile.swift; path = GBShop/BusinessLogic/Network/SignOut/UpdateProfile.swift; sourceTree = SOURCE_ROOT; };
+		32CB359425DEC1FA00960A70 /* SignOutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutResult.swift; sourceTree = "<group>"; };
+		32CB359925DEC20700960A70 /* UpdateProfileResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileResult.swift; sourceTree = "<group>"; };
 		32D234D325D813BD000BC9C6 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		32D234E125D81459000BC9C6 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		32D234E625D81482000BC9C6 /* CustomDecodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodableSerializer.swift; sourceTree = "<group>"; };
@@ -112,18 +130,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		322D6D4125D4410A008525B9 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				322D6D4225D4410A008525B9 /* AppDelegate.swift */,
-				322D6D7B25D44234008525B9 /* BusinessLogic */,
-				322D6D7C25D4423B008525B9 /* Entity */,
-				32B9A7E125D6D1AD008DAF63 /* Assembly */,
-				322D6D7D25D44242008525B9 /* Flows */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		322D6D5825D4410B008525B9 /* StoreAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,17 +168,13 @@
 		322D6D7C25D4423B008525B9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				32D234F825D81612000BC9C6 /* LoginResult.swift */,
 				32D234FD25D8161B000BC9C6 /* User.swift */,
+				32D234F825D81612000BC9C6 /* LoginResult.swift */,
+				32CB356C25DEC0D900960A70 /* SignUpResult.swift */,
+				32CB359425DEC1FA00960A70 /* SignOutResult.swift */,
+				32CB359925DEC20700960A70 /* UpdateProfileResult.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		322D6D7D25D44242008525B9 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Flows;
 			sourceTree = "<group>";
 		};
 		32B9A7E025D6D16E008DAF63 /* Environments */ = {
@@ -181,13 +183,6 @@
 				322D6D5025D4410B008525B9 /* Info.plist */,
 			);
 			path = Environments;
-			sourceTree = "<group>";
-		};
-		32B9A7E125D6D1AD008DAF63 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		32B9A7E225D6D1CE008DAF63 /* Core */ = {
@@ -201,12 +196,50 @@
 		32B9A7E625D6D209008DAF63 /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
-				322D6D4125D4410A008525B9 /* App */,
+				322D6D4225D4410A008525B9 /* AppDelegate.swift */,
+				322D6D7B25D44234008525B9 /* BusinessLogic */,
 				32B9A7E225D6D1CE008DAF63 /* Core */,
+				322D6D7C25D4423B008525B9 /* Entity */,
 				322D6D7925D44215008525B9 /* Resources */,
 				32B9A7E025D6D16E008DAF63 /* Environments */,
 			);
 			path = GBShop;
+			sourceTree = "<group>";
+		};
+		32CB356A25DEC09700960A70 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				32CB357625DEC19900960A70 /* SignUpRequestFactory.swift */,
+				32CB358525DEC1BD00960A70 /* SignUp.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		32CB356B25DEC0A300960A70 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				32D2350325D8164E000BC9C6 /* AuthRequestFactory.swift */,
+				32D2350B25D81665000BC9C6 /* Auth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		32CB357425DEC13B00960A70 /* SignOut */ = {
+			isa = PBXGroup;
+			children = (
+				32CB357B25DEC1A600960A70 /* SignOutRequestFactory.swift */,
+				32CB358A25DEC1C600960A70 /* SignOut.swift */,
+			);
+			path = SignOut;
+			sourceTree = "<group>";
+		};
+		32CB357525DEC14100960A70 /* UpdateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				32CB358025DEC1B300960A70 /* UpdateProfileRequestFactory.swift */,
+				32CB358F25DEC1D100960A70 /* UpdateProfile.swift */,
+			);
+			path = UpdateProfile;
 			sourceTree = "<group>";
 		};
 		32D234D225D8139E000BC9C6 /* Network */ = {
@@ -224,9 +257,11 @@
 		32D2350225D81641000BC9C6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				32D2350325D8164E000BC9C6 /* AuthRequestFactory.swift */,
-				32D2350B25D81665000BC9C6 /* Auth.swift */,
 				32D2351825D816A0000BC9C6 /* RequestFactory.swift */,
+				32CB356B25DEC0A300960A70 /* Auth */,
+				32CB356A25DEC09700960A70 /* SignUp */,
+				32CB357425DEC13B00960A70 /* SignOut */,
+				32CB357525DEC14100960A70 /* UpdateProfile */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -372,10 +407,19 @@
 				32D234EC25D815C4000BC9C6 /* DataRequest.swift in Sources */,
 				32D234F425D815E2000BC9C6 /* RequestRouter.swift in Sources */,
 				32D234FE25D8161B000BC9C6 /* User.swift in Sources */,
+				32CB357C25DEC1A600960A70 /* SignOutRequestFactory.swift in Sources */,
+				32CB359525DEC1FA00960A70 /* SignOutResult.swift in Sources */,
 				32D2350C25D81665000BC9C6 /* Auth.swift in Sources */,
+				32CB358125DEC1B300960A70 /* UpdateProfileRequestFactory.swift in Sources */,
 				32D2350425D8164E000BC9C6 /* AuthRequestFactory.swift in Sources */,
+				32CB359A25DEC20700960A70 /* UpdateProfileResult.swift in Sources */,
+				32CB359025DEC1D100960A70 /* UpdateProfile.swift in Sources */,
+				32CB358B25DEC1C600960A70 /* SignOut.swift in Sources */,
 				32D234E225D81459000BC9C6 /* ErrorParser.swift in Sources */,
 				32D234D425D813BD000BC9C6 /* AbstractErrorParser.swift in Sources */,
+				32CB356D25DEC0D900960A70 /* SignUpResult.swift in Sources */,
+				32CB358625DEC1BD00960A70 /* SignUp.swift in Sources */,
+				32CB357725DEC19900960A70 /* SignUpRequestFactory.swift in Sources */,
 				32D234E725D81482000BC9C6 /* CustomDecodableSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
