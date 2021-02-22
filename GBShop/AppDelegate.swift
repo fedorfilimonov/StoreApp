@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         signIn()
         updateProfile()
         signOut()
+        getProductsList()
+        getProduct()
         
         return true
     }
@@ -65,6 +67,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch response.result {
             case .success(let signOut):
                 print(signOut)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getProductsList() {
+        let getProductsList = requestFactory.makeGetProductsListRequestFactory()
+        getProductsList.getProductsList(pageNumber: 1, idCategory: 1) { response in
+            switch response.result {
+            case .success(let getProductsList):
+                print(getProductsList)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getProduct() {
+        let getProduct = requestFactory.makeGetProductRequestFactory()
+        getProduct.getProduct(idProduct: 123) { response in
+            switch response.result {
+            case .success(let getProduct):
+                print(getProduct)
             case .failure(let error):
                 print(error.localizedDescription)
             }
