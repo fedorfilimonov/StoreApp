@@ -1,19 +1,19 @@
 //
-//  GetReviews.swift
+//  DeleteFromCart.swift
 //  StoreApp
 //
-//  Created by Федор Филимонов on 05.03.2021.
+//  Created by Федор Филимонов on 15.03.2021.
 //
 
 import Foundation
 import Alamofire
 
-class GetReviews: AbstractRequestFactory {
+class DeleteFromCart: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
     let baseUrl: URL
-
+    
     init(baseUrl: URL, errorParser: AbstractErrorParser,
          sessionManager: Session,
          queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
@@ -24,26 +24,24 @@ class GetReviews: AbstractRequestFactory {
     }
 }
 
-extension GetReviews: GetReviewsRequestFactory {
-    func getReviews(pageNumber: Int, idProduct: Int, completionHandler: @escaping (AFDataResponse<GetReviewsResult>) -> Void) {
-        let requestModel = GetReviewsRequest(baseUrl: baseUrl, pageNumber: pageNumber, idProduct: idProduct)
+extension DeleteFromCart: DeleteFromCartRequestFactory {
+    func deleteFromCart(productID: Int, completionHandler: @escaping (AFDataResponse<DeleteFromCartResult>) -> Void) {
+        let requestModel = DeleteFromCartRequest(baseUrl: baseUrl, productID: productID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension GetReviews {
-    struct GetReviewsRequest: RequestRouter {
+extension DeleteFromCart {
+    struct DeleteFromCartRequest: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "getReviews.json"
+        let method: HTTPMethod = .post
+        let path: String = "deleteFromCart"
         
-        let pageNumber: Int
-        let idProduct: Int
+        let productID: Int
         
         var parameters: Parameters? {
             return [
-                "page_number" : pageNumber,
-                "id_product" : idProduct
+                "product_id" : productID
             ]
         }
     }

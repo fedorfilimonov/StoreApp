@@ -12,12 +12,12 @@ class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
-    
-    init(
-        errorParser: AbstractErrorParser,
-        sessionManager: Session,
-        queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
+    let baseUrl: URL
+
+    init(baseUrl: URL, errorParser: AbstractErrorParser,
+         sessionManager: Session,
+         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
+        self.baseUrl = baseUrl
         self.errorParser = errorParser
         self.sessionManager = sessionManager
         self.queue = queue
@@ -34,8 +34,10 @@ extension Auth: AuthRequestFactory {
 extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "login.json"
+//        let method: HTTPMethod = .get
+//        let path: String = "login.json"
+        let method: HTTPMethod = .post
+        let path: String = "logIn"
         
         let login: String
         let password: String
