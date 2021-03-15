@@ -1,5 +1,5 @@
 //
-//  GetProductsList.swift
+//  GetProduct.swift
 //  StoreApp
 //
 //  Created by Федор Филимонов on 19.02.2021.
@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class GetProductsList: AbstractRequestFactory {
+class GetProduct: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -24,29 +24,26 @@ class GetProductsList: AbstractRequestFactory {
     }
 }
 
-extension GetProductsList: GetProductsListRequestFactory {
-    func getProductsList(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<GetProductsListResult>) -> Void) {
-        let requestModel = ProductsList(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
+extension GetProduct: GetProductRequestFactory {
+    func getProduct(idProduct: Int, completionHandler: @escaping (AFDataResponse<GetProductResult>) -> Void) {
+        let requestModel = Product(baseUrl: baseUrl, idProduct: idProduct)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension GetProductsList {
-    struct ProductsList: RequestRouter {
+extension GetProduct {
+    struct Product: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "catalogData.json"
+        let path: String = "getGoodById.json"
         
-        let pageNumber: Int
-        let idCategory: Int
-        
+        let idProduct: Int
+
         var parameters: Parameters? {
             return [
                 
-                "page_number" : pageNumber,
-                "id_category" : idCategory
+                "id_product": idProduct
             ]
         }
     }
 }
-

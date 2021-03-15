@@ -55,4 +55,19 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return GetProduct(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeAddReviewRequestFactory() -> AddReviewRequestFactory {
+        let errorParser = makeErrorParser()
+        return AddReview(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeGetReviewsRequestFactory() -> GetReviewsRequestFactory {
+        let errorParser = makeErrorParser()
+        return GetReviews(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeDeleteReviewRequestFactory() -> DeleteReviewRequestFactory {
+        let errorParser = makeErrorParser()
+        return DeleteReview(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }

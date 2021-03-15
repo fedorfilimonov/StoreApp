@@ -1,14 +1,14 @@
 //
-//  GetProduct.swift
+//  AddReview.swift
 //  StoreApp
 //
-//  Created by Федор Филимонов on 19.02.2021.
+//  Created by Федор Филимонов on 05.03.2021.
 //
 
 import Foundation
 import Alamofire
 
-class GetProduct: AbstractRequestFactory {
+class AddReview: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -24,29 +24,27 @@ class GetProduct: AbstractRequestFactory {
     }
 }
 
-extension GetProduct: GetProductRequestFactory {
-    func getProduct(idProduct: Int, completionHandler: @escaping (AFDataResponse<GetProductResult>) -> Void) {
-        let requestModel = Product(baseUrl: baseUrl, idProduct: idProduct)
+extension AddReview: AddReviewRequestFactory {
+    func addReview(idUser: Int, text: String, completionHandler: @escaping (AFDataResponse<AddReviewResult>) -> Void) {
+        let requestModel = AddReviewRequest(baseUrl: baseUrl, idUser: idUser, text: text)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension GetProduct {
-    struct Product: RequestRouter {
+extension AddReview {
+    struct AddReviewRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "getGoodById.json"
+        let path: String = "addReview.json"
         
-        let idProduct: Int
-
+        let idUser: Int
+        let text: String
+        
         var parameters: Parameters? {
             return [
-                
-                "id_product": idProduct
+                "id_user" : idUser,
+                "text" : text
             ]
         }
     }
 }
-
-
-

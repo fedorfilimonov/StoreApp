@@ -15,15 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        signUp()
-        signIn()
-        updateProfile()
-        signOut()
-        getProductsList()
-        getProduct()
+        // Profile actions
+//        signUp()
+//        signIn()
+//        updateProfile()
+//        signOut()
+        
+        // Product actions
+//        getProductsList()
+//        getProduct()
+        
+        // Review actions
+        addReview()
+        getReview()
+        deleteReview()
         
         return true
     }
+    
+    // MARK: - Profile actions
     
     func signUp() {
         let signUp = requestFactory.makeSignUpRequestFactory()
@@ -73,6 +83,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    // MARK: - Product actions
+    
     func getProductsList() {
         let getProductsList = requestFactory.makeGetProductsListRequestFactory()
         getProductsList.getProductsList(pageNumber: 1, idCategory: 1) { response in
@@ -91,6 +103,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch response.result {
             case .success(let getProduct):
                 print(getProduct)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - Review actions
+    
+    func addReview() {
+        let addReview = requestFactory.makeAddReviewRequestFactory()
+        addReview.addReview(idUser: 123, text: "Review text") { response in
+            switch response.result {
+            case .success(let addReview):
+                print(addReview)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getReview() {
+        let getReviews = requestFactory.makeGetReviewsRequestFactory()
+        getReviews.getReviews(pageNumber: 1, idProduct: 123) { response in
+            switch response.result {
+            case .success(let getReviews):
+                print(getReviews)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func deleteReview() {
+        let deleteReview = requestFactory.makeDeleteReviewRequestFactory()
+        deleteReview.deleteReview(idComment: 123) { response in
+            switch response.result {
+            case .success(let deleteReview):
+                print(deleteReview)
             case .failure(let error):
                 print(error.localizedDescription)
             }
