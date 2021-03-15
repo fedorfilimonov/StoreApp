@@ -10,8 +10,10 @@ import Alamofire
 
 class RequestFactory {
     
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+//    let baseUrl = URL(string: "http://127.0.0.1:8080/")!
     
+    let baseUrl = URL(string: "https://arcane-waters-29586.herokuapp.com/")!
+
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
@@ -28,46 +30,66 @@ class RequestFactory {
     
     func makeSignUpRequestFactory() -> SignUpRequestFactory {
         let errorParser = makeErrorParser()
-        return SignUp(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return SignUp(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return Auth(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeUpdateProfileRequestFactory() -> UpdateProfileRequestFactory {
         let errorParser = makeErrorParser()
-        return UpdateProfile(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return UpdateProfile(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeSignOutRequestFactory() -> SignOutRequestFactory {
         let errorParser = makeErrorParser()
-        return SignOut(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return SignOut(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeGetProductsListRequestFactory() -> GetProductsListRequestFactory {
         let errorParser = makeErrorParser()
-        return GetProductsList(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return GetProductsList(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeGetProductRequestFactory() -> GetProductRequestFactory {
         let errorParser = makeErrorParser()
-        return GetProduct(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return GetProduct(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeAddReviewRequestFactory() -> AddReviewRequestFactory {
         let errorParser = makeErrorParser()
-        return AddReview(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return AddReview(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeGetReviewsRequestFactory() -> GetReviewsRequestFactory {
         let errorParser = makeErrorParser()
-        return GetReviews(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return GetReviews(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeDeleteReviewRequestFactory() -> DeleteReviewRequestFactory {
         let errorParser = makeErrorParser()
-        return DeleteReview(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return DeleteReview(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeAddToCartRequestFactory() -> AddToCartRequestFactory {
+        let errorParser = makeErrorParser()
+        return AddToCart(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeDeleteFromCartRequestFactory() -> DeleteFromCartRequestFactory {
+        let errorParser = makeErrorParser()
+        return DeleteFromCart(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeGetCartRequestFactory() -> GetCartRequestFactory {
+        let errorParser = makeErrorParser()
+        return GetCart(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makePaymentInCartRequestFactory() -> MakePaymentInCartRequestFactory {
+        let errorParser = makeErrorParser()
+        return MakePaymentInCart(baseUrl: baseUrl, errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
