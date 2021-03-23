@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Profile actions
-        signUp()
-        signIn()
-//        updateProfile() // Нужно дописать реализацию на сервере
-        signOut()
+//        signUp()
+        //        signIn()
+////        updateProfile() // Нужно дописать реализацию на сервере
+//        signOut()
         
         // Product actions
         // Нужно дописать реализацию на сервере
@@ -33,10 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        deleteReview()
         
         // Cart actions
-        addToCart()
-        deleteFromCart()
-        getCart()
-        makePaymentInCart()
+//        addToCart()
+//        deleteFromCart()
+//        getCart()
+//        makePaymentInCart()
 
         return true
     }
