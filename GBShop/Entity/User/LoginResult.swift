@@ -8,6 +8,20 @@
 import Foundation
 
 struct LoginResult: Codable {
-    let result: Int
-    let user: User
+    var result: Int
+    var user: User
+}
+
+struct User: Codable {
+    var id: Int
+    var login: String
+    var name: String
+    var lastname: String
+    
+//    enum CodingKeys: String, CodingKey {
+//        case id = "id_user"
+//        case login = "user_login"
+//        case name = "user_name"
+//        case lastname = "user_lastname"
+//    }
 }

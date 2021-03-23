@@ -1,14 +1,14 @@
 //
-//  AddReview.swift
+//  GetCart.swift
 //  StoreApp
 //
-//  Created by Федор Филимонов on 05.03.2021.
+//  Created by Федор Филимонов on 15.03.2021.
 //
 
 import Foundation
 import Alamofire
 
-class AddReview: AbstractRequestFactory {
+class GetCart: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -24,26 +24,24 @@ class AddReview: AbstractRequestFactory {
     }
 }
 
-extension AddReview: AddReviewRequestFactory {
-    func addReview(idUser: Int, text: String, completionHandler: @escaping (AFDataResponse<AddReviewResult>) -> Void) {
-        let requestModel = AddReviewRequest(baseUrl: baseUrl, idUser: idUser, text: text)
+extension GetCart: GetCartRequestFactory {
+    func getCart(userID: Int, completionHandler: @escaping (AFDataResponse<GetCartResult>) -> Void) {
+        let requestModel = GetCartRequest(baseUrl: baseUrl, userID: userID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension AddReview {
-    struct AddReviewRequest: RequestRouter {
+extension GetCart {
+    struct GetCartRequest: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "addReview.json"
-        
-        let idUser: Int
-        let text: String
-        
+        let method: HTTPMethod = .post
+        let path: String = "getCart"
+
+        let userID: Int
+
         var parameters: Parameters? {
             return [
-                "id_user" : idUser,
-                "text" : text
+                "user_id" : userID
             ]
         }
     }

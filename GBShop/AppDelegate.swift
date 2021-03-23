@@ -17,19 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Profile actions
 //        signUp()
-//        signIn()
-//        updateProfile()
+        //        signIn()
+////        updateProfile() // Нужно дописать реализацию на сервере
 //        signOut()
         
         // Product actions
+        // Нужно дописать реализацию на сервере
 //        getProductsList()
 //        getProduct()
         
         // Review actions
-        addReview()
-        getReview()
-        deleteReview()
+        // Нужно дописать реализацию на сервере
+//        addReview()
+//        getReview()
+//        deleteReview()
         
+        // Cart actions
+//        addToCart()
+//        deleteFromCart()
+//        getCart()
+//        makePaymentInCart()
+
         return true
     }
     
@@ -141,6 +149,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch response.result {
             case .success(let deleteReview):
                 print(deleteReview)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - Cart actions
+    
+    func addToCart() {
+        let addToCart = requestFactory.makeAddToCartRequestFactory()
+        addToCart.addToCart(productID: 123, quantityInCart: 1) { response in
+            switch response.result {
+            case .success(let addProductToCart):
+                print(addProductToCart)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func deleteFromCart() {
+        let deleteFromCart = requestFactory.makeDeleteFromCartRequestFactory()
+        deleteFromCart.deleteFromCart(productID: 123) { response in
+            switch response.result {
+            case .success(let deleteProductFromCart):
+                print(deleteProductFromCart)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getCart() {
+        let getCart = requestFactory.makeGetCartRequestFactory()
+        getCart.getCart(userID: 123) { response in
+            switch response.result {
+            case .success(let getCart):
+                print(getCart)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makePaymentInCart() {
+        let makePayment = requestFactory.makePaymentInCartRequestFactory()
+        makePayment.makePaymentInCart(userID: 123, payAmount: 1000) { response in
+            switch response.result {
+            case .success(let makePayment):
+                print(makePayment)
             case .failure(let error):
                 print(error.localizedDescription)
             }
