@@ -42,6 +42,9 @@
 		326F856D2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
 		326F856E2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
 		326F856F2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
+		326F85722722E579006E27DC /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F85712722E579006E27DC /* ProductPageViewController.swift */; };
+		326F85732722E579006E27DC /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F85712722E579006E27DC /* ProductPageViewController.swift */; };
+		326F85742722E579006E27DC /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F85712722E579006E27DC /* ProductPageViewController.swift */; };
 		32AA65302614D9A2004A4CD0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AA652F2614D9A2004A4CD0 /* ProfileViewController.swift */; };
 		32C14C7B25E4135500CFC898 /* GetProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C14C7A25E4135500CFC898 /* GetProductTests.swift */; };
 		32C2E3E625F149DB00BC4255 /* AddRevewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E3E525F149DB00BC4255 /* AddRevewTests.swift */; };
@@ -137,6 +140,7 @@
 		322D6D6625D4410B008525B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326F85682722DEB0006E27DC /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
 		326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
+		326F85712722E579006E27DC /* ProductPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageViewController.swift; sourceTree = "<group>"; };
 		32AA652F2614D9A2004A4CD0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		32C14C7A25E4135500CFC898 /* GetProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductTests.swift; sourceTree = "<group>"; };
 		32C2E3E525F149DB00BC4255 /* AddRevewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRevewTests.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 		321741E42603AAB8003CEA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				326F85702722E540006E27DC /* ProductPage */,
 				32AA652E2614D98F004A4CD0 /* Profile */,
 				32F8B0BA2604C84900A887BF /* Main */,
 				321741F72603AF56003CEA61 /* Launch */,
@@ -384,6 +389,14 @@
 				32E17EB925F27A830048D270 /* Review */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		326F85702722E540006E27DC /* ProductPage */ = {
+			isa = PBXGroup;
+			children = (
+				326F85712722E579006E27DC /* ProductPageViewController.swift */,
+			);
+			path = ProductPage;
 			sourceTree = "<group>";
 		};
 		32AA652E2614D98F004A4CD0 /* Profile */ = {
@@ -767,6 +780,7 @@
 				320629CA25FFBE9000D6F4E6 /* AddToCart.swift in Sources */,
 				32CB356D25DEC0D900960A70 /* SignUpResult.swift in Sources */,
 				321742092603B1C4003CEA61 /* LaunchViewController.swift in Sources */,
+				326F85722722E579006E27DC /* ProductPageViewController.swift in Sources */,
 				320629CC25FFBE9000D6F4E6 /* DeleteFromCart.swift in Sources */,
 				32E17EAC25F279E80048D270 /* GetReviews.swift in Sources */,
 				320629C625FFBE9000D6F4E6 /* MakePaymentInCart.swift in Sources */,
@@ -798,6 +812,7 @@
 				3220518725E032FD003BDF14 /* GetProductsListTests.swift in Sources */,
 				3220514125E020D6003BDF14 /* AuthTests.swift in Sources */,
 				3220514E25E024AB003BDF14 /* SignOutTests.swift in Sources */,
+				326F85732722E579006E27DC /* ProductPageViewController.swift in Sources */,
 				3220515325E02508003BDF14 /* UpdateProfileTests.swift in Sources */,
 				3220514925E023AE003BDF14 /* SignUpTests.swift in Sources */,
 			);
@@ -807,6 +822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326F85742722E579006E27DC /* ProductPageViewController.swift in Sources */,
 				322D6D6525D4410B008525B9 /* StoreAppUITests.swift in Sources */,
 				326F856F2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */,
 			);
