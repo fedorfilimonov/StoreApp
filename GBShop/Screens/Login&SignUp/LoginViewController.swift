@@ -42,11 +42,7 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
-        print(email)
-        print(password)
-        
         loginRequest(userName: email, password: password)
-        
     }
     
     func loginRequest(userName: String, password: String) {
@@ -59,6 +55,9 @@ class LoginViewController: UIViewController {
                     
                     if login.result == 1 {
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                        UserDefaults.standard.set(login.user.id, forKey: "userID")
+                        UserDefaults.standard.set(login.user.name, forKey: "userFirstName")
+                        UserDefaults.standard.set(login.user.lastname, forKey: "userLastName")
                         print("Login succesfull")
                         dismiss(animated: true, completion: nil)
                     }

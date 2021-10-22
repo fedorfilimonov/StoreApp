@@ -9,12 +9,18 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    // MARK: - UI
-    
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
     
     // MARK: - Instance Properties
     let defaults = UserDefaults.standard
     
+    
+    // MARK: - ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +32,7 @@ class MainViewController: UIViewController {
     
     func checkIfUserIsLoggedIn() {
         let isUserLoggedIn = defaults.bool(forKey: "isUserLoggedIn")
+        print(isUserLoggedIn)
         
         guard isUserLoggedIn else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {

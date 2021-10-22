@@ -38,6 +38,11 @@
 		322D6D4325D4410A008525B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D6D4225D4410A008525B9 /* AppDelegate.swift */; };
 		322D6D4C25D4410B008525B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322D6D4B25D4410B008525B9 /* Assets.xcassets */; };
 		322D6D6525D4410B008525B9 /* StoreAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D6D6425D4410B008525B9 /* StoreAppUITests.swift */; };
+		326F85692722DEB0006E27DC /* MainViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F85682722DEB0006E27DC /* MainViewController + TableView.swift */; };
+		326F856D2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
+		326F856E2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
+		326F856F2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */; };
+		32AA65302614D9A2004A4CD0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AA652F2614D9A2004A4CD0 /* ProfileViewController.swift */; };
 		32C14C7B25E4135500CFC898 /* GetProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C14C7A25E4135500CFC898 /* GetProductTests.swift */; };
 		32C2E3E625F149DB00BC4255 /* AddRevewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E3E525F149DB00BC4255 /* AddRevewTests.swift */; };
 		32CB356D25DEC0D900960A70 /* SignUpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB356C25DEC0D900960A70 /* SignUpResult.swift */; };
@@ -130,6 +135,9 @@
 		322D6D6025D4410B008525B9 /* StoreAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D6D6425D4410B008525B9 /* StoreAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppUITests.swift; sourceTree = "<group>"; };
 		322D6D6625D4410B008525B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326F85682722DEB0006E27DC /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
+		326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
+		32AA652F2614D9A2004A4CD0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		32C14C7A25E4135500CFC898 /* GetProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductTests.swift; sourceTree = "<group>"; };
 		32C2E3E525F149DB00BC4255 /* AddRevewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRevewTests.swift; sourceTree = "<group>"; };
 		32CB356C25DEC0D900960A70 /* SignUpResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResult.swift; sourceTree = "<group>"; };
@@ -253,6 +261,7 @@
 		321741E42603AAB8003CEA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				32AA652E2614D98F004A4CD0 /* Profile */,
 				32F8B0BA2604C84900A887BF /* Main */,
 				321741F72603AF56003CEA61 /* Launch */,
 				321741ED2603AAFD003CEA61 /* Login&SignUp */,
@@ -375,6 +384,14 @@
 				32E17EB925F27A830048D270 /* Review */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		32AA652E2614D98F004A4CD0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				32AA652F2614D9A2004A4CD0 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		32B9A7E025D6D16E008DAF63 /* Environments */ = {
@@ -569,6 +586,8 @@
 			children = (
 				32F8B0BB2604C86000A887BF /* Main.storyboard */,
 				32F8B0C02604CB1400A887BF /* MainViewController.swift */,
+				326F85682722DEB0006E27DC /* MainViewController + TableView.swift */,
+				326F856C2722E0C1006E27DC /* CatalogueTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -714,7 +733,9 @@
 				32E17EA325F279E30048D270 /* DeleteReview.swift in Sources */,
 				3220516125E0262F003BDF14 /* GetProductsListRequestFactory.swift in Sources */,
 				322D6D4325D4410A008525B9 /* AppDelegate.swift in Sources */,
+				326F85692722DEB0006E27DC /* MainViewController + TableView.swift in Sources */,
 				3220517525E02EBD003BDF14 /* GetProductRequestFactory.swift in Sources */,
+				32AA65302614D9A2004A4CD0 /* ProfileViewController.swift in Sources */,
 				32D234F925D81612000BC9C6 /* LoginResult.swift in Sources */,
 				32D234EC25D815C4000BC9C6 /* DataRequest.swift in Sources */,
 				32D234F425D815E2000BC9C6 /* RequestRouter.swift in Sources */,
@@ -730,6 +751,7 @@
 				32CB358125DEC1B300960A70 /* UpdateProfileRequestFactory.swift in Sources */,
 				320629CD25FFBE9000D6F4E6 /* DeleteFromCartRequestFactory.swift in Sources */,
 				32E17EC225F27B190048D270 /* GetReviewsResult.swift in Sources */,
+				326F856D2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */,
 				32D2350425D8164E000BC9C6 /* AuthRequestFactory.swift in Sources */,
 				320629EE25FFBFA100D6F4E6 /* GetCartResult.swift in Sources */,
 				321742042603B0EA003CEA61 /* SceneDelegate.swift in Sources */,
@@ -771,6 +793,7 @@
 			files = (
 				32C14C7B25E4135500CFC898 /* GetProductTests.swift in Sources */,
 				32C2E3E625F149DB00BC4255 /* AddRevewTests.swift in Sources */,
+				326F856E2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */,
 				32E17EE625F27FEB0048D270 /* DeleteReviewTests.swift in Sources */,
 				3220518725E032FD003BDF14 /* GetProductsListTests.swift in Sources */,
 				3220514125E020D6003BDF14 /* AuthTests.swift in Sources */,
@@ -785,6 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322D6D6525D4410B008525B9 /* StoreAppUITests.swift in Sources */,
+				326F856F2722E0C1006E27DC /* CatalogueTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
